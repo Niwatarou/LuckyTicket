@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lucky Ticket</string>
+    <string name="info">Введите номер билета, чтобы узнать счастливый ли он</string>
+    <string name="button_result">Ну что там?!</string>
+    <string name="lucky">Счастливый билет! Ешь скорее!</string>
+    <string name="unlucky">Не счастливый. Прокатись ещё раз!</string>
+    <string name="et_hint">Введите номер</string>
+</resources>
