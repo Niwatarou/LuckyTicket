@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText etNum;
@@ -36,17 +38,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvInput.setText(etNum.getText().toString());
         int rightSide = 0;
         int leftSide = 0;
+        int inLength = numLength(num);
 
-        int[] numArr = new int[6];
+//        ArrayList<Integer> numArr = new ArrayList<>();
 
-        for (int i = 0; i < 6; i++) {
-            numArr[i] = num % 10;
-            num = num / 10;
-            if(i < 3) {
-                rightSide += numArr[i];
+
+        for (int i = 0; i < inLength; i++) {
+//            numArr.add(num % 10);
+            if(i < inLength / 2) {
+                rightSide += num % 10;
             } else {
-                leftSide += numArr[i];
+                leftSide +=num % 10;
             }
+            num = num / 10;
         }
 
         switch(v.getId()) {
@@ -67,5 +71,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
+    }
+
+    public int numLength(int i) {
+        int result = 0;
+        while(i != 0) {
+            i = i / 10;
+            result++;
+        }
+//        Toast.makeText(this, "Result = " + result, Toast.LENGTH_LONG).show();
+        return result;
     }
 }

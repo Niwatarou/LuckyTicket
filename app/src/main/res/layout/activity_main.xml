@@ -26,7 +26,6 @@
         android:id="@+id/etNum"
         android:hint="@string/et_hint"
         android:gravity="center_horizontal"
-        android:maxLength="1"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
